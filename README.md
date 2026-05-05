@@ -4,7 +4,7 @@ This project serves my AIM240 flight delay prediction model as a REST API for th
 
 The model predicts whether a U.S. domestic flight is likely to arrive **15 minutes or more late** using pre-departure inputs such as airline, origin, destination, scheduled departure time, scheduled flight time, and distance.
 
-## Rubric Coverage
+## Coverage per Rubric
 
 - Clean project structure: `app/`, `schemas/`, `services/`, `api/`, `models/`
 - ML model service: loads `models/flight_delay_bundle.joblib`
@@ -12,7 +12,7 @@ The model predicts whether a U.S. domestic flight is likely to arrive **15 minut
 - Input validation: Pydantic request/response schemas
 - Docker: `Dockerfile` and `docker-compose.yml`
 - Documentation: this README with run commands and examples
-- Bonus: batch prediction endpoint and basic tests
+- Bonus attempt: batch prediction endpoint and basic tests
 
 ## Project Structure
 
@@ -25,7 +25,7 @@ flight-delay-api/
 │   ├── schemas/inference.py
 │   └── services/model.py
 ├── models/
-│   └── flight_delay_bundle.joblib   # add from Colab
+│   └── flight_delay_bundle.joblib   # added from Colab
 ├── notebooks/export_model_from_colab.py
 ├── tests/test_api.py
 ├── Dockerfile
@@ -54,7 +54,7 @@ Copy that file into:
 models/flight_delay_bundle.joblib
 ```
 
-The API has a demo fallback if the model is missing, but the final submission should include the real `flight_delay_bundle.joblib` file.
+The API has a demo fallback if the model is missing, but the final submission includes the real `flight_delay_bundle.joblib` file.
 
 ## Run Locally
 
@@ -182,13 +182,13 @@ Body:
 }
 ```
 
-## What to Screenshot for Submission
+## What to Screenshot and for Submission
 
 1. GitHub repository link
 2. Screenshot of Swagger docs at `http://localhost:8000/docs`
 3. Screenshot of successful `/api/v1/health`
 4. Screenshot of successful `/api/v1/predict`
-5. Optional bonus screenshot of `/api/v1/predict/batch`
+5. Optional bonus screenshot attempt of `/api/v1/predict/batch`
 
 ## Notes
 
