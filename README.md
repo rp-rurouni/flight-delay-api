@@ -26,7 +26,7 @@ flight-delay-api/
 │   └── services/model.py
 ├── models/
 │   └── flight_delay_bundle.joblib   # added from Colab
-├── notebooks/export_model_from_colab.py
+├── notebooks/export_model_from_colab.py, RAP-Finalv1.1-Predicting Flight Delays Using Machine Learning.ipynb
 ├── tests/test_api.py
 ├── Dockerfile
 ├── docker-compose.yml
@@ -182,13 +182,13 @@ Body:
 }
 ```
 
-## What to Screenshot and for Submission
+## Screenshots and for Submission
 
 1. GitHub repository link
 2. Screenshot of Swagger docs at `http://localhost:8000/docs`
 3. Screenshot of successful `/api/v1/health`
 4. Screenshot of successful `/api/v1/predict`
-5. Optional bonus screenshot attempt of `/api/v1/predict/batch`
+
 
 ## Notes
 
