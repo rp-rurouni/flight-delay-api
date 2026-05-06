@@ -2,7 +2,7 @@
 
 This project serves my AIM240 flight delay prediction model as a REST API for the AIM230 ML API Service assignment.
 
-The model predicts whether a U.S. domestic flight is likely to arrive **15 minutes or more late** using pre-departure inputs such as airline, origin, destination, scheduled departure time, scheduled flight time, and distance.
+The model predicts whether a U.S. domestic flight is likely to arrive 15 minutes or more late using pre-departure inputs such as airline, origin, destination, scheduled departure time, scheduled flight time, and distance.
 
 ## Coverage per Rubric
 
@@ -12,6 +12,7 @@ The model predicts whether a U.S. domestic flight is likely to arrive **15 minut
 - Input validation: Pydantic request/response schemas
 - Docker: `Dockerfile` and `docker-compose.yml`
 - Documentation: this README with run commands and examples
+- Screenshots: required assignment screenshots are uploaded in the `screenshots/` folder
 - Bonus attempt: batch prediction endpoint and basic tests
 
 ## Project Structure
@@ -21,13 +22,25 @@ flight-delay-api/
 ├── app/
 │   ├── main.py
 │   ├── config.py
-│   ├── api/endpoints.py
-│   ├── schemas/inference.py
-│   └── services/model.py
+│   ├── api/
+│   │   └── endpoints.py
+│   ├── schemas/
+│   │   └── inference.py
+│   └── services/
+│       └── model.py
 ├── models/
 │   └── flight_delay_bundle.joblib   # added from Colab
-├── notebooks/export_model_from_colab.py, RAP-Finalv1.1-Predicting Flight Delays Using Machine Learning.ipynb
-├── tests/test_api.py
+├── notebooks/
+│   ├── export_model_from_colab.py
+│   └── RAP-Finalv1.1-Predicting Flight Delays Using Machine Learning.ipynb
+├── screenshots/
+│   ├── 01_github_repo_files.png
+│   ├── 02_swagger_docs.png
+│   ├── 03_health_endpoint_success.png
+│   ├── 04_predict_endpoint_success.png
+│   └── 05_docker_swagger_or_terminal.png
+├── tests/
+│   └── test_api.py
 ├── Dockerfile
 ├── docker-compose.yml
 ├── requirements.txt
@@ -60,8 +73,10 @@ The API has a demo fallback if the model is missing, but the final submission in
 
 ```bash
 python -m venv venv
+
 # Windows:
 venv\Scripts\activate
+
 # Mac/Linux:
 source venv/bin/activate
 
@@ -182,13 +197,23 @@ Body:
 }
 ```
 
-## Screenshots and for Submission
+## Screenshots for Submission
 
-1. GitHub repository link
-2. Screenshot of Swagger docs at `http://localhost:8000/docs`
-3. Screenshot of successful `/api/v1/health`
-4. Screenshot of successful `/api/v1/predict`
+Required assignment screenshots are uploaded in the repository under:
 
+```text
+screenshots/
+```
+
+The screenshots folder includes evidence for:
+
+- GitHub repository link / project files
+- Swagger docs at `http://localhost:8000/docs`
+- Successful `/api/v1/health` response
+- Successful `/api/v1/predict` response
+- Docker run proof, if completed
+
+For LMS submission, I will provide the GitHub repository link and also attach the screenshots separately if the LMS allows attachments.
 
 ## Notes
 
